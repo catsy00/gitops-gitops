@@ -1,4 +1,4 @@
-sources:
+resources:
 - oauth.yaml
 - project-leaders.yaml
 - self-provisioners.yaml
