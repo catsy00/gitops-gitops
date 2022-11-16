@@ -1,14 +1,12 @@
 pipeline {
   triggers {
-    pollSCM('H/3 * * * *')
+    pollSCM ('H/3 * * * *')
   }
   options {
     disableConcurrentBuilds()
   }
   agent {
-    node {
-      label 'nodejs'
-    }
+    label 'nodejs'
   }
   stages {
     stage ('Validate configuration resources') {
@@ -32,7 +30,7 @@ pipeline {
       steps {
         sh 'oc login -u testuser -p redhat123 --insecure-skip-tls-verify \
 https://kubernetes.default.svc:443'
-        sh 'oc new-project test-testuser || true'
+        sh 'oc new-project test-testuser || ture'
       }
     }
   }
